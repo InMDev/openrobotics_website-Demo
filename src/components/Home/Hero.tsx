@@ -10,7 +10,7 @@ function Hero() {
       <section className="relative bg-blend-darken">
         <img
           className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
-          src="assets/img/wallpaper.png"
+          src="assets/img/hero_image.png"
           alt="Team Picture"
         />
 
@@ -25,8 +25,8 @@ function Hero() {
               </strong>
             </h1>
 
-            <p className="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
-              2022-2023 Winter Applications Coming Soon
+            <p className="max-w-lg mt-4 sm:leading-relaxed sm:text-xl text-stone-900">
+            Fall Recruitment Cycle has closed. Check back later for new positions!
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8 text-center">
@@ -39,18 +39,18 @@ function Hero() {
 
               <a
                 className="block w-full px-12 py-3 text-md font-medium bg-white rounded shadow text-red-600 sm:w-auto hover:bg-gray-100  focus:outline-none focus:ring"
-                href="/about"
+                href="https://openrobotics.ca/Sponsor"
               >
-                Learn More 🤔
+                Support Us
               </a>
             </div>
           </div>
-          <div className="flex-1 text-center mt-4 lg:mt-0 lg:ml-3">
+          {/* <div className="flex-1 text-center mt-4 lg:mt-0 lg:ml-3">
             <img
               src="assets/img/introduction-visual.png"
               className="w-full mx-auto hidden lg:block  lg:w-full"
             />
-          </div>
+          </div> */}
         </div>
       </section>
     </>

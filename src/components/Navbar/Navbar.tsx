@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Logo from "../Navbar/logo.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -19,7 +18,7 @@ const Navbar = () => {
         <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <a href="/">
-              <img src={Logo} width={40} height={50} alt="OpBots Logo" />
+              <img src="assets/img/logo_update.png" width={120} height={130} alt="OpBots Logo" />
             </a>
             <div className="md:hidden">
               <button
@@ -68,7 +67,8 @@ const Navbar = () => {
                 return (
                   <li
                     key={idx}
-                    className="text-gray-600 hover:text-red-600 hover:font-semibold"
+                    className="text-gray-900 hover:text-red-600 hover:font-semibold"
+                    onClick={() => setState(!state)}
                   >
                     <Link to={item.path}>{item.title}</Link>
                   </li>

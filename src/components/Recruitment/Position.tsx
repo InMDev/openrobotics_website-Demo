@@ -4,9 +4,10 @@ import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 
 interface Props {
   name: string;
-  positions: number;
+  positions: string;
   team: string;
   desc: string;
+  responsibilites: Array<string>,
   qualifications : Array<string>,
   pref : Array<string>,
 }
@@ -29,12 +30,12 @@ const Position = (props: Props) => {
     <div className="flex flex-col w-full py-4">
       <div
         className={
-          "flex py-4 mt-4 flex-row justify-between text-center items-start font-bold rounded-lg border-b-2 border-l-2 border-r-2 border-gray-200 bg-gray-200 text-gray-900 w-full " +
+          "flex py-4 mt-4 flex-row cursor-pointer justify-between text-center items-start font-bold rounded-lg border-b-2 border-l-2 border-r-2 border-gray-200 bg-gray-200 text-gray-900 w-full " +
           removeBorder(arrow)
         }
         onClick={() => setArrow(!arrow)}
       >
-        <h1 className="mx-2">{props.name} {" "} - {props.team}</h1>
+        <h1 className="mx-2 text-md">{props.name} {" "} - {props.team}</h1>
         <button className="outline-none style-none border-none bg-gray-200">
           {arrow ? (
             <AiOutlineDown className="mx-4 my-1 font-bold" />
@@ -61,18 +62,26 @@ const Position = (props: Props) => {
           <span className="font-normal text-gray-900">{props.desc}</span>
         </p>
         <p className="text-gray-900 font-bold px-4 mb-4">
+          Responsibilites :{" "}
+          <br></br>
+          {props.responsibilites.map((res:string, idx) => <div key={idx}>
+            <span className="font-normal text-gray-900"> • {" "} {res}</span>
+            <br></br>
+            </div>)}
+        </p>
+        <p className="text-gray-900 font-bold px-4 mb-4">
           Preffered Qualifications :{" "}
           <br></br>
-          {props.qualifications.map((qual:string) => <div>
-            <span className="font-normal text-gray-900"> {qual}</span>
+          {props.qualifications.map((qual:string, idx) => <div key={idx}>
+            <span className="font-normal text-gray-900"> • {" "} {qual}</span>
             <br></br>
             </div>)}
         </p>
         <p className="text-gray-900 font-bold px-4">
           Bonus Qualifications :{" "}
           <br></br>
-          {props.pref.map((qual:string) => <div>
-            <span className="font-normal text-gray-900"> {qual}</span>
+          {props.pref.map((qual:string, idx) => <div key={idx}>
+            <span className="font-normal text-gray-900"> • {" "} {qual}</span>
             <br></br>
             </div>)
           }

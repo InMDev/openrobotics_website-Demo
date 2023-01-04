@@ -76,7 +76,7 @@ const ContactPage = () => {
           </div>
           <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
             <div className="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
-              <form action="https://formsubmit.co/eeb7e242b7ca7870dcc264b5e1d28365" method="POST">
+              <form action="https://formsubmit.co/cc70d125351744f81ef8ee010ca858d2" method="POST">
                 <div className="mb-6">
                   <input
                     type="email"
@@ -94,6 +94,9 @@ const ContactPage = () => {
                                 focus:border-red-600
                                 "
                   />
+                 <input type="hidden" name="_next" value="https://openrobotics.ca/"></input>
+					       <input type="hidden" name="_subject" value="Contact Submission - OpBots"></input>
+                 <input type="hidden" name="_captcha" value="false"></input>
                 </div>
                 <div className="mb-6">
                   <textarea
